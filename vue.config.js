@@ -36,6 +36,15 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    proxy: {
+      '/api': {
+        // 路径重写
+        target: 'http://localhost:8001/',
+        pathRewrite: {
+          '^/api': '/',
+        },
+      },
+    },
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {
