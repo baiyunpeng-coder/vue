@@ -41,7 +41,7 @@ module.exports = {
         // 路径重写
         target: 'http://localhost:8001/',
         pathRewrite: {
-          '^/api': '/',
+          '^/api': '',
         },
       },
     },
