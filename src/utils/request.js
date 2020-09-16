@@ -21,16 +21,7 @@ service.interceptors.request.use(
       // please modify it according to the actual situation
       config.headers['Authorization'] = 'Bearer' + getToken()
     }
-    let web_url = window.location.href
-
-    if (web_url.indexOf('/#/') === -1) {
-      if (web_url.endsWith('/')) {
-        web_url += '#/'
-      } else {
-        web_url += '/#/'
-      }
-    }
-    config.headers['web_url'] = web_url
+    config.headers['web_url'] = window.location.href
     return config
   },
   error => {
