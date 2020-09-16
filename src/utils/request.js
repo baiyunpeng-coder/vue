@@ -44,11 +44,8 @@ service.interceptors.response.use(
    * You can also judge the status by HTTP Status Code
    */
   response => {
-    debugger
     const res = response.data
-
     if (res.code && res.code === 401) {
-      debugger
       window.location.href = res.data
     }
     return res
