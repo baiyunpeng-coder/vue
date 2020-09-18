@@ -32,6 +32,7 @@ const actions = {
     return new Promise((resolve, reject) => {
       commit('SET_TOKEN', token)
       setToken(token)
+      console.log(123)
       getInfo(token).then(response => {
         const { username, avatar } = response
 

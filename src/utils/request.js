@@ -47,6 +47,7 @@ service.interceptors.response.use(
     const res = response.data
     if (res.code && res.code === 401) {
       window.location.href = res.data
+      return Promise.resolve()
     }
     return res
   },
